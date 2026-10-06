@@ -35,3 +35,4 @@ Just open `index.html` in a browser. No build step needed.
 
 - **GitHub Pages:** push the repo, then Settings > Pages > Deploy from branch `main` (root).
 - **Netlify / Vercel:** drag and drop the folder or connect the repo.
+# Product-Landing-Page
