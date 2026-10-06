@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AeroFlask insulated steel bottle - keeps drinks cold for 24 hours and hot for 12." />
+  <title>AeroFlask | Insulated Steel Bottle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Aero<span>Flask</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#enquiry">Enquiry</a></li>
+          <li><a href="#enquiry" class="btn btn-small">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Product Hero -->
+    <section class="hero" id="product">
+      <div class="container hero-grid">
+
+        <div class="product-image">
+          <svg id="bottleSvg" viewBox="0 0 300 400" role="img" aria-label="AeroFlask steel bottle illustration">
+            <defs>
+              <linearGradient id="bodyGrad" x1="0" x2="1">
+                <stop offset="0" stop-color="#0f766e" />
+                <stop offset="0.45" stop-color="#2dd4bf" />
+                <stop offset="1" stop-color="#0f766e" />
+              </linearGradient>
+              <linearGradient id="capGrad" x1="0" x2="1">
+                <stop offset="0" stop-color="#1f2937" />
+                <stop offset="0.5" stop-color="#4b5563" />
+                <stop offset="1" stop-color="#1f2937" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="150" cy="378" rx="80" ry="10" fill="rgba(0,0,0,0.15)" />
+            <g id="bottleGroup" style="transform-origin: 150px 370px;">
+              <rect x="125" y="20" width="50" height="40" rx="8" fill="url(#capGrad)" />
+              <rect x="135" y="8" width="30" height="16" rx="6" fill="#111827" />
+              <rect x="115" y="56" width="70" height="20" rx="4" fill="#374151" />
+              <path d="M100 80 Q100 76 115 76 L185 76 Q200 76 200 80 L215 140 L215 350 Q215 370 195 370 L105 370 Q85 370 85 350 L85 140 Z" fill="url(#bodyGrad)" />
+              <rect x="105" y="170" width="90" height="90" rx="10" fill="rgba(255,255,255,0.18)" />
+              <text x="150" y="210" text-anchor="middle" font-size="20" font-weight="700" fill="#fff" font-family="Arial, sans-serif">AERO</text>
+              <text x="150" y="236" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial, sans-serif">FLASK</text>
+            </g>
+          </svg>
+          <span class="badge">24h Cold &bull; 12h Hot</span>
+        </div>
+
+        <div class="product-info">
+          <p class="eyebrow">New Arrival</p>
+          <h1 id="productTitle">AeroFlask Insulated Steel Bottle</h1>
+          <p class="description">
+            Double-wall vacuum insulated, BPA-free and leak-proof. Built from food-grade
+            stainless steel so your water stays ice cold all day and your tea stays hot on the go.
+          </p>
+
+          <div class="price-row">
+            <span class="price" id="unitPrice" aria-live="polite">&#8377;799</span>
+            <span class="price-note">per bottle, inclusive of taxes</span>
+          </div>
+
+          <fieldset class="variants">
+            <legend>Select size</legend>
+            <div class="variant-list" id="variantList"></div>
+          </fieldset>
+
+          <div class="quantity-block">
+            <span class="label" id="qtyLabel">Quantity</span>
+            <div class="qty" role="group" aria-labelledby="qtyLabel">
+              <button type="button" id="qtyMinus" aria-label="Decrease quantity">&minus;</button>
+              <input type="number" id="qtyInput" value="1" min="1" max="10" aria-label="Quantity" />
+              <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <div class="total-row">
+            <span>Total</span>
+            <strong id="totalPrice" aria-live="polite">&#8377;799</strong>
+          </div>
+
+          <a href="#enquiry" class="btn btn-primary" id="ctaBtn">Enquire &amp; Order Now</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2>Why choose AeroFlask?</h2>
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Vacuum Insulated</h3>
+            <p>Double-wall steel keeps drinks cold for 24 hours and hot for 12 hours.</p>
+          </article>
+          <article class="feature">
+            <h3>100% Leak-proof</h3>
+            <p>Tight-seal lid with silicone ring. Toss it in your bag without worry.</p>
+          </article>
+          <article class="feature">
+            <h3>Food-grade Steel</h3>
+            <p>BPA-free 304 stainless steel. No metallic taste, easy to clean.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enquiry Form -->
+    <section class="enquiry" id="enquiry">
+      <div class="container enquiry-wrap">
+        <h2>Send us an enquiry</h2>
+        <p class="enquiry-sub">Fill in your details and we will get back to you within one business day.</p>
+
+        <p class="selection-summary" id="selectionSummary">Selected: 500 ml &times; 1 = &#8377;799</p>
+
+        <form id="enquiryForm" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name" />
+            <small class="error" id="nameError" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" />
+            <small class="error" id="emailError" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone (10 digits)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="numeric" placeholder="9876543210" />
+            <small class="error" id="phoneError" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us what you need (min 10 characters)"></textarea>
+            <small class="error" id="messageError" role="alert"></small>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Submit Enquiry</button>
+        </form>
+
+        <div class="success" id="successMessage" role="status" aria-live="polite" hidden>
+          <strong>Thank you!</strong>
+          <span id="successText">Your enquiry has been submitted. We will contact you soon.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> AeroFlask. Demo page built for a web developer internship assignment.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
